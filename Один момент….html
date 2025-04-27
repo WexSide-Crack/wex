@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Один момент…</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script type="text/javascript" src="./Один момент…_files/main.js.Без названия" charset="UTF-8"></script>
+    <link rel="stylesheet" crossorigin="anonymous" href="./Один момент…_files/main.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            color: #313131;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            min-height: 100vh
+        }
+
+        .main-content {
+            margin: 8rem auto;
+            max-width: 60rem;
+            padding-left: 1.5rem
+        }
+
+        @media (width <=720px) {
+            .main-content {
+                margin-top: 4rem
+            }
+        }
+
+        .h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 2.25rem
+        }
+
+        @media (width <=720px) {
+            .h2 {
+                font-size: 1.25rem;
+                line-height: 1.5rem
+            }
+        }
+
+        #challenge-error-text {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+);
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-left: 34px
+        }
+
+        @media (prefers-color-scheme:dark) {
+            body {
+                background-color: #222;
+                color: #d9d9d9
+            }
+        }
+    </style>
+    <meta http-equiv="refresh" content="360">
+    <script src="./Один момент…_files/v1"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            color: #313131
+        }
+
+        button,
+        html {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            min-height: 100vh
+        }
+
+        body.no-js .loading-verifying {
+            visibility: hidden
+        }
+
+        body.theme-dark {
+            background-color: #222;
+            color: #d9d9d9
+        }
+
+        body.theme-dark a {
+            color: #fff
+        }
+
+        body.theme-dark a:hover {
+            color: #ee730a;
+            text-decoration: underline
+        }
+
+        body.theme-dark .lds-ring div {
+            border-color: #999 transparent transparent
+        }
+
+        body.theme-dark .font-red {
+            color: #b20f03
+        }
+
+        body.theme-dark .ctp-button {
+            background-color: #4693ff;
+            color: #1d1d1d
+        }
+
+        body.theme-dark #challenge-success-text {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=")
+        }
+
+        body.theme-dark #challenge-error-text {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+")
+        }
+
+        body.theme-light {
+            background-color: #fff;
+            color: #313131
+        }
+
+        body.theme-light a {
+            color: #0051c3
+        }
+
+        body.theme-light a:hover {
+            color: #ee730a;
+            text-decoration: underline
+        }
+
+        body.theme-light .lds-ring div {
+            border-color: #595959 transparent transparent
+        }
+
+        body.theme-light .font-red {
+            color: #fc574a
+        }
+
+        body.theme-light .ctp-button {
+            background-color: #003681;
+            border-color: #003681;
+            color: #fff
+        }
+
+        body.theme-light #challenge-success-text {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=")
+        }
+
+        body.theme-light #challenge-error-text {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZjNTc0YSIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjZmM1NzRhIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+")
+        }
+
+        a {
+            background-color: transparent;
+            color: #0051c3;
+            text-decoration: none;
+            transition: color .15s ease
+        }
+
+        a:hover {
+            color: #ee730a;
+            text-decoration: underline
+        }
+
+        .main-content {
+            margin: 8rem auto;
+            max-width: 60rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            width: 100%
+        }
+
+        .main-content .loading-verifying {
+            height: 76.391px
+        }
+
+        .spacer {
+            margin: 2rem 0
+        }
+
+        .spacer-top {
+            margin-top: 4rem
+        }
+
+        .spacer-bottom {
+            margin-bottom: 2rem
+        }
+
+        .heading-favicon {
+            height: 2rem;
+            margin-right: .5rem;
+            width: 2rem
+        }
+
+        @media (width <=720px) {
+            .main-content {
+                margin-top: 4rem
+            }
+
+            .heading-favicon {
+                height: 1.5rem;
+                width: 1.5rem
+            }
+        }
+
+        .main-wrapper {
+            align-items: center;
+            display: flex;
+            flex: 1;
+            flex-direction: column
+        }
+
+        .font-red {
+            color: #b20f03
+        }
+
+        .h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 3.75rem
+        }
+
+        .h2 {
+            font-weight: 500
+        }
+
+        .core-msg,
+        .h2 {
+            font-size: 1.5rem;
+            line-height: 2.25rem
+        }
+
+        .body-text,
+        .core-msg {
+            font-weight: 400
+        }
+
+        .body-text {
+            font-size: 1rem;
+            line-height: 1.25rem
+        }
+
+        @media (width <=720px) {
+            .h1 {
+                font-size: 1.5rem;
+                line-height: 1.75rem
+            }
+
+            .h2 {
+                font-size: 1.25rem
+            }
+
+            .core-msg,
+            .h2 {
+                line-height: 1.5rem
+            }
+
+            .core-msg {
+                font-size: 1rem
+            }
+        }
+
+        #challenge-error-text {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZjNTc0YSIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjZmM1NzRhIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");
+            padding-left: 34px
+        }
+
+        #challenge-error-text,
+        #challenge-success-text {
+            background-repeat: no-repeat;
+            background-size: contain
+        }
+
+        #challenge-success-text {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjMzEzMTMxIiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=");
+            padding-left: 42px
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        .ctp-button {
+            background-color: #0051c3;
+            border: .063rem solid #0051c3;
+            border-radius: .313rem;
+            color: #fff;
+            cursor: pointer;
+            font-size: .875rem;
+            line-height: 1.313rem;
+            margin: 2rem 0;
+            padding: .375rem 1rem;
+            transition-duration: .2s;
+            transition-property: background-color, border-color, color;
+            transition-timing-function: ease
+        }
+
+        .ctp-button:hover {
+            background-color: #003681;
+            border-color: #003681;
+            color: #fff;
+            cursor: pointer
+        }
+
+        .footer {
+            font-size: .75rem;
+            line-height: 1.125rem;
+            margin: 0 auto;
+            max-width: 60rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            width: 100%
+        }
+
+        .footer-inner {
+            border-top: 1px solid #d9d9d9;
+            padding-bottom: 1rem;
+            padding-top: 1rem
+        }
+
+        .clearfix:after {
+            clear: both;
+            content: "";
+            display: table
+        }
+
+        .clearfix .column {
+            float: left;
+            padding-right: 1.5rem;
+            width: 50%
+        }
+
+        .diagnostic-wrapper {
+            margin-bottom: .5rem
+        }
+
+        .footer .ray-id {
+            text-align: center
+        }
+
+        .footer .ray-id code {
+            font-family: monaco, courier, monospace
+        }
+
+        .core-msg,
+        .zone-name-title {
+            overflow-wrap: break-word
+        }
+
+        @media (width <=720px) {
+            .diagnostic-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center
+            }
+
+            .clearfix:after {
+                clear: none;
+                content: none;
+                display: initial;
+                text-align: center
+            }
+
+            .column {
+                padding-bottom: 2rem
+            }
+
+            .clearfix .column {
+                float: none;
+                padding: 0;
+                width: auto;
+                word-break: keep-all
+            }
+
+            .zone-name-title {
+                margin-bottom: 1rem
+            }
+        }
+
+        .loading-verifying {
+            height: 76.391px
+        }
+
+        .lds-ring {
+            display: inline-block;
+            position: relative
+        }
+
+        .lds-ring,
+        .lds-ring div {
+            height: 1.875rem;
+            width: 1.875rem
+        }
+
+        .lds-ring div {
+            animation: lds-ring 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+            border: .3rem solid transparent;
+            border-radius: 50%;
+            border-top-color: #313131;
+            box-sizing: border-box;
+            display: block;
+            position: absolute
+        }
+
+        .lds-ring div:first-child {
+            animation-delay: -.45s
+        }
+
+        .lds-ring div:nth-child(2) {
+            animation-delay: -.3s
+        }
+
+        .lds-ring div:nth-child(3) {
+            animation-delay: -.15s
+        }
+
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(1turn)
+            }
+        }
+
+        .rtl .heading-favicon {
+            margin-left: .5rem;
+            margin-right: 0
+        }
+
+        .rtl #challenge-success-text {
+            background-position: 100%;
+            padding-left: 0;
+            padding-right: 42px
+        }
+
+        .rtl #challenge-error-text {
+            background-position: 100%;
+            padding-left: 0;
+            padding-right: 34px
+        }
+
+        .challenge-content .loading-verifying {
+            height: 76.391px
+        }
+
+        @media (prefers-color-scheme:dark) {
+            body {
+                background-color: #222;
+                color: #d9d9d9
+            }
+
+            body a {
+                color: #fff
+            }
+
+            body a:hover {
+                color: #ee730a;
+                text-decoration: underline
+            }
+
+            body .lds-ring div {
+                border-color: #999 transparent transparent
+            }
+
+            body .font-red {
+                color: #b20f03
+            }
+
+            body .ctp-button {
+                background-color: #4693ff;
+                color: #1d1d1d
+            }
+
+            body #challenge-success-text {
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI2IDI2Ij48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJNMTMgMGExMyAxMyAwIDEgMCAwIDI2IDEzIDEzIDAgMCAwIDAtMjZtMCAyNGExMSAxMSAwIDEgMSAwLTIyIDExIDExIDAgMCAxIDAgMjIiLz48cGF0aCBmaWxsPSIjZDlkOWQ5IiBkPSJtMTAuOTU1IDE2LjA1NS0zLjk1LTQuMTI1LTEuNDQ1IDEuMzg1IDUuMzcgNS42MSA5LjQ5NS05LjYtMS40Mi0xLjQwNXoiLz48L3N2Zz4=")
+            }
+
+            body #challenge-error-text {
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+")
+            }
+        }
+
+        \n
+        /*# sourceMappingURL=to.css.map */
+    </style>
+    <script src="./Один момент…_files/api.js.Без названия" async="" defer="" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-wrapper" role="main">
+        <div class="main-content">
+            <h1 class="zone-name-title h1">www.wexside.ru</h1>
+            <p id="oqbP7" class="h2 spacer-bottom">Проверяем, человек ли вы. Это может занять несколько секунд.</p>
+            <div id="ppIS7">
+                <div>
+                    <div><template shadowrootmode="closed"><iframe
+                                src="https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/turnstile/if/ov2/av0/rcv/rzume/0x4AAAAAAADnOjc0PNeA8qVm/dark/fbE/new/normal/auto/"
+                                allow="cross-origin-isolated; fullscreen; autoplay"
+                                sandbox="allow-same-origin allow-scripts allow-popups" id="cf-chl-widget-rzume"
+                                tabindex="0" title="Widget containing a Cloudflare security challenge"
+                                style="display: none; border: none; overflow: hidden;"></iframe></template><input
+                            type="hidden" name="cf-turnstile-response" id="cf-chl-widget-rzume_response"></div>
+                </div>
+            </div>
+            <div id="xiMI0" class="spacer loading-verifying" style="display: block; visibility: visible;">
+                <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div id="odkg8" class="core-msg spacer spacer-top">Сначала <a href="index.html">www.wexside.ru</a> необходимо проверить
+                безопасность вашего подключения.</div>
+            <div id="GkAwr0" style="display: none;">
+                <div id="challenge-success-text" class="h2">Проверка выполнена успешно</div>
+                <div class="core-msg spacer">Ожидание ответа www.wexside.ru...</div>
+            </div><noscript>
+                <div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div>
+            </noscript>
+        </div>
+    </div>
+    <script>(function () { window._cf_chl_opt = { cvId: '3', cZone: "www.curseforge.com", cType: 'non-interactive', cRay: '936c9f4dcfdd9d45', cH: 'avUplOAQe5J2MCtJONQdyjQ.xuZmpmxqI8Cua7qPlQg-1745739107-1.2.1.1-21OcyywlOAQWjeLByy5IPuDlbWNs6KZIthTqQw0VwPWij.hOAWntNUbmWxC3UmiN', cUPMDTk: "\/minecraft\/search?page=1&pageSize=20&sortBy=relevancy&class=mc-mods&search=Zombie&__cf_chl_tk=65QLgkc4fw9wV0zzeHtu81AG_2kCbJ0EUnWz_PRl7U0-1745739107-1.0.1.1-nPtr7DKT4_N61ev5nwNeodG_8uMxl6JWzVD_OJBr4wk", cFPWv: 'g', cITimeS: '1745739107', cTplC: 0, cTplV: 5, cTplB: 'cf', cK: "unsupported_browser_beacon", fa: "\/minecraft\/search?page=1&pageSize=20&sortBy=relevancy&class=mc-mods&search=Zombie&__cf_chl_f_tk=65QLgkc4fw9wV0zzeHtu81AG_2kCbJ0EUnWz_PRl7U0-1745739107-1.0.1.1-nPtr7DKT4_N61ev5nwNeodG_8uMxl6JWzVD_OJBr4wk", md: "uGzli_2RhJJV6Fnqi_7s10JrnerCaNBF3DhjQmaBGKk-1745739107-1.2.1.1-j3L9Q26q81W26yqIIq6pAOodArGZqVLx5yhp16o32kUdcO2x8BTg2Ki5y8iWtlBbfdlp6DBQGL.mWxA1vySVQpdjS6scKrKL0kL4h40Luff47BeylmZY6LOy1cv.GJssf5QDHdcr1ac8aRChAWEV70kNgmNJlnp3bOsDIlathjYDfwQ_PkUDcLDs8mhgxRIuyEX3nE2w1LUmIcWocKteovnAyKgB9RRScwGPoJOPxFagUY.JnAA6.RQf1AKzmAJpjZS0nEo74vc6c5KKD8VppeRZ7em.VZNLsU2k.XJ6cgEFeMZVyCO1VzPmQeAoRqstA0xz_KFPe0IBYzDhOI5w_JvWnd3wWFNyTVKN0LQ1OXT5TYLIoeTjnRTsWXwuLoodVNtP6aP64It7N9srEf4P3aDw7HNbimUu_WnfGjNii4PW3nPvxXqLSlwYgrwmrtKkLXqZOsNkZjny86K9jVoiHGDnwEHyYWnI93O0rUoUMbMtgEK9t6LUkKhJc4MCsfitbv5h_ZP6ZIsStZIj2NQ3NPDUfjXsF5Pbn7.I7qWQGTzPic3jg2PtMUWrReOemylFMabJ0kNxIeMT.bxWakG_zV0SaJURnKrRgUiutiU0lvSsM6iEuucgANhkuXJHbGcNmJ5OWZzKR1GZD8zIs6qhu71h76Viuti1zMDT2kHXyhPurZIyrqt.cVrskJIzBT7aarEGp8Gst5WD0litSiBPKbCvV0dEbKpHIAKTsHivb_W4F77tSeW0AxdZuiA.LLZjajyll6bBPvHdwevOthhYE5K6cnqaKmNmcfEBtE2ZDXWcj5SADZnVf5IqSL9MTWSm0doMMxnGK.pU3yDHVfQ6x37hDQzjbRRcoBnpbpk9AesHp.LXiO_I16.pOU60aXmmLuXn8a20cbYWS22R61QKxiZBuOktqUTqNktjq_wWn9_NvRrELbqEFi.w8Xme0HrG1Hail3gIKwYVmWh8m3xqNMk5upc90U9h34aYmlq6rR5bhQzSIkySnmyH.ENObJDPGlsTM5qoEImJChVJ1qCjzweE2j3lOundilNW8Kb7TdACrhL7pSrQuT0jT2rGL1PYGpg3zDdXObMHmrmCROjLa1x4lkJ6JK6hto.hXEFSBJ9FNYZqrV5i.ylzQttkVxhFKg_WEiOvi5BcDQT4XXkBYbDO00F5cHVGD2ItsYJKd7qIS7HYDfHkch3zuV9U20rjDpUG9GXOcBJOh2bX0Zqhe3fegjWfNTSDevhsjfyJOpHAA_W0emB8GOEkPTIJCX7UArqJ4HU5KLWW_vuUBtlFO10NYkdK3k.ns_haDJUZP2jxYpFPsk22Cur6K3v6O9_O", mdrd: "4y8Sf4hmlwp3aBLuU2lqfUYkSlHSRm9Vz0VBHbSRVPA-1745739107-1.2.1.1-pgLKNQi2zxk_Vh84kfTM1K4oqQmdjsV_SGcT4xwhuhT.qeqXJlxS32PgN3MLlm7_drgczrsSMfeaO9atPvFFtgsc5Mw5o41jB3Zkvja0dilKacf2tE6s9NDao67xmTIAHXyxQqCNgdXvelcqUQuIQi_NnqcZiW.8Z6FkD0oJgAtCzJQ_4H1AYteVH3nWuxkbn68ciddLJrD2Cv04UNIdYyKdO2eHS946bW7Wt17rWZe7wOAnYgU8K8cu4Ioj.SzpKf75l1WXiZajpxKnnpk_i5DeZSXyBYRZ9AxOoigRpp5yX5l7lpbBkv0HY1geicpqdu1sux8qI21BlDEZUyPeGCd_FtD7yx6k90euaDLKvqAMyMNYh68QA4U4GYZ2jQ9ZWaZrUPQJVIZssTGuFvXfOXaB.l7Ok9QFySwFBQL2NtwVdxt_ct35I0KxaYgz2l3n4gNVacuwWMJ_WAHoMNb78tTh4Jyo.sRhX3xSxklEF1HhO8k4oDczsCh0cldZfAfT8sq.zWl615Q3_Yu2G5V__piF_RvZVNo6z3.oUMSRuK__PjIE6xGAt_Y2UaRrR41X0HrHrpW8451pTC4Iwg2I6fsYCJ11MOf4umm5kGf_hOrz0TRhRJaSVebL53Jsd2DzypY6KtK6v4TmToiNKhl2_0mtGIrQ6ILL0qJ42hhW5T6McCMHtWCBlNDzHO.v2ructKE_uo5rnDgd2sziiEf2PHSBTg5ORPVgnRP4LI3SzfTvLVZCZgHcZ_5OdYdd84n1yQtkkBBJuWs3BQzf5qQtTzaX.YKKTRTIdUnxAMe82PbdcvkHNnn2n1kOvQ23DuKuNhUuPvYkLrFVjkLZTFf2XtT3piD91VyCoUTtNndVFi6ssuZRgkKXLlF3PFnTRmyFbvGOpb88OofGuVyw6fnUDk5AQxpGnFlxUrzC3yM1CSCUTLkaZ2ociGbRLnyrS.W.KaAD6GnAwixz0QDK.DFR4ltmmDmSIis3fvPkIdd4VpJuIRFZp1v2HZwycdLcDI8AxxG77_V1_fz7XsSVTYh2MRM1teimYQ2BqbA_TadU2vY.TSzsLqZQCk75xYjdT_1AYE_Bn3A7XhvUhy_c66ewZmnwlw.Dg2cbP7GpxaUmK336lMWYfALhYh_1Es31CerGYQpblj611wKKpLe6Y8B5R4gad1._M5v0mQX00CNOTzubhRcBYgARHC2s5Tjb1FKlQmk.wLMX_UbPlUvAvFeQ_7EqzMaX2VuO6YxYi1De.VgWw0XqqhyrgEixBjD6JnHPvkpR636a6Cy_3JEPWIxKLhw3XmyQhE_zeyJmkkgDyLAZpGNs1eH2_zzouy5KJ5j9zXCW83vOVyzEPYD8lJnWPtsprJQtR2Fbo294h8_pHe2EFoayUOvoBTrexitX_8Sssn6Xbxxs70Dafv.PzvYdxflO6ZeVz27Qe2Sz.pnIuc0QcXxT_spTkratlGrGHmrT0XimdBu_DiWQR5aFNV4HSWkx1AG7gEJL_J_mObuaG1KBHe228H4byLXPM3Fky2DieGwN4YprwG3uXQQ6oJbCEDavg1WcN3_vpzZyybsaAFtGgzjNutGbc499vwZoLidJzsPdWGE7uRT6m0jG0hBhL0b07xzbC2i2kxLbLA5cWu6I1qwUUu0Ncbol.PLZNBPdvP5Nx4sFZ1CaHdVMYF.0n5sYN0YSVi09ZFMRfcoWSUnfGMwjMSznTAcBrCup5goMaxvSRFoR8geH2AuvQRoK3jmkwHHvqSKimOrT7FDDco3GzzY3IHFvLChl0epIv8JRi..4OYr6PbvpIbl7.0y6YTv4od_0K.hSjNvPesds292HlkxpStzdZKnR7_7Q9hofTAOJX.eQvIs.VcZiqHea8dcFS3oxI5rG2Hf0AD_EQ.7hAoEWKuZgDvHbpyoGzOc.DMgJQLecpEjxxJdn78DVjJq9V9s13HBkS8oP0vUou..AfBYI4zK5h.6vxHqKQW.Z8S6ewRMHQJA3sse9wu3Q.AwLBjYNKx_u2XqBRGS4cMxsImwSFJtjbwvXdNnHJWfnqOg3qvXlMSeFuu1Z_v.YFT_2AYfO3lHoPvximGWwqccARpUhpphLtPA9wcCFiy6pXpWR9ff03o3cQsIW.Wr3xjhL9f25Mb9ObZ2ap2a00f.1lq5fAhBmmVAyGGsBakbXlBjDYJC9PJxzTnLT2u94UMQYD.kZ2auwMOoXc.w9LIcCBDuIh6DvaJ3CGAvJhWBYnj8xcjtWzU7CQdNQEQiSJ.9dzKVeIJKo4KacbZI0VyClGzfq.OvTez_coKubrMRbW9EACzlHeDFqEVeS8.HQWO6lcisOeEqW4khXatFkfZYNvrPKh9CguC68CZPq._4qAzvcNiQQKiHjUGqkK69jOwRmnb2TljDmVUEX7FGIZ_lxS7cutg8rFdAP4ZTA47nSjT19ypCeb_E6_p3Cc3VRihgpwFjBCWn6MEVddl1q24UxBAUwaKVWLk9mahGlIYDtfsdyUHoQckY8_vfZVdsEySp1yzP6yOuKxDNqIgDefHaJ5TeaUo1G_6KXRgVY4RE0sq1GNOQi0uHmhf1xn8z9CtRw5MrLgkZ9qWEhYsrBL0lwvLhavu.3AAFbNIETDRWBS8GZMCBK_7PtLmYTw9YGDMOZy410SSOhy20nTT3ePWWlk0YitQ.whGPBsKj1XcMseI0Gzft07hLb4SbpI2F6ihOAMrb5gryS8MHgI_f0heTSdYRSpX9q.zigid7BVPECb1zXRN5lVtidO3fa3gZhk4XAT2ZVTGPmHmfh8nNiKgGE9wsobpInsYn51JD4Y0.j6kU8O7KHt3OOIHAA3Gp7dB6rXfDBQzuMJFKc0a3_OBQHSJwIQVsCnv52PKpQYZwEkxXbk.Ki0KWmYGBcfMm7GgjxthBmU2B_qgBbG.D7WpV2wiarYrQ6ws8DhB5IfKWPt5lFF_Wk5O_68S05kc0zFDNmY1ga.3ibMhyboEcbtTYAg9B3kNSvWpb.y6xo2O2anemYZi0xPcVd5GE8h0gqIkhz1_kBWIsu0ku0JODg3CX20swbIyCS6Vl.vI5Dj8hrNkdf6OOAOK50JwdckkUPqOFcmR7Eb2TuwOdDBwZaj9Dg36xb78j3xjh1zLwittkYFTlyLQPX8r1t_URqjswRFQCbFIgZG2AzjwTQRX_dYYzM3uHQaQt9oqPiISkFqBNPACcpxCxM2vM60LBHUxakN1pJ_HrCPk2oXmAHqcoXu8XUC46Z82jHqc3x0jZo3oV4JHkXwlSBJVZhaKOhGR8dSQ" }; var cpo = document.createElement('script'); cpo.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=936c9f4dcfdd9d45'; window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash; window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search; if (window.history && window.history.replaceState) { var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash; history.replaceState(null, null, "\/minecraft\/search?page=1&pageSize=20&sortBy=relevancy&class=mc-mods&search=Zombie&__cf_chl_rt_tk=65QLgkc4fw9wV0zzeHtu81AG_2kCbJ0EUnWz_PRl7U0-1745739107-1.0.1.1-nPtr7DKT4_N61ev5nwNeodG_8uMxl6JWzVD_OJBr4wk" + window._cf_chl_opt.cOgUHash); cpo.onload = function () { history.replaceState(null, null, ogU); } } document.getElementsByTagName('head')[0].appendChild(cpo); }());</script>
+    <div class="footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="clearfix diagnostic-wrapper">
+                <div class="ray-id">Ray ID: <code>92ksz#94394k</code></div>
+            </div>
+            <div class="text-center" id="footer-text">Производительность и безопасность на платформе <a
+                    rel="noopener noreferrer" href="https://www.cloudflare.com/?utm_source=challenge&amp;utm_campaign=j"
+                    target="_blank">Cloudflare</a></div>
+        </div>
+    </div>
+</body>
+
+</html>
